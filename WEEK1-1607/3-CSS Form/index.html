@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input[type=text],
+        select{
+            width: 100%;
+            padding:10px;
+            border-radius: 10px;
+            margin:8px 0px;
+            box-sizing: border-box;
+
+        }
+        /* içine girdiğinde */
+        input[type=text]:focus{
+            background-color:greenyellow;
+        }
+
+        /* üzerine gelindiğinde */
+        input[type=text]:hover{
+            background-color:red;
+        }
+
+        input[type=submit]{
+            width: 100%;
+            padding:13px;
+            background-color:lightslategray;
+            border:none;
+            border-radius: 15px;
+            color:wheat;
+
+        }
+        .formGenerated{
+            background-color:aquamarine;padding:20px;margin:10px 300px;
+
+        }
+    </style>
+</head>
+<body>
+    <form class="formGenerated">
+        <label for="">Ad</label>
+        <input type="text" name="firstname" placeholder="Adınızı Giriniz">
+        <label for="">Soyad</label>
+        <input type="text" name="lasttname" placeholder="Soyadınızı Giriniz">
+        <label for="">Ülkeler</label>
+        <select name="country" id="">
+            <option value="tr">Türkiye</option>
+            <option value="fr">Fransa</option>
+            <option value="en">İngiltere</option>
+        </select>
+        <input type="submit" value="Kaydet">
+
+
+    </form>
+</body>
+</html>
