@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        input[type=text],
-        select{
+        .formElement{
             width: 100%;
             padding:10px;
             border-radius: 10px;
@@ -16,16 +15,22 @@
 
         }
         /* içine girdiğinde */
-        input[type=text]:focus{
+        .formElement:focus{
             background-color:greenyellow;
         }
 
+        
+
         /* üzerine gelindiğinde */
-        input[type=text]:hover{
+        .formElement:hover{
             background-color:red;
         }
 
-        input[type=submit]{
+        .formSubmit:hover{
+            background-color:greenyellow;
+        }
+
+        .formSubmit{
             width: 100%;
             padding:13px;
             background-color:lightslategray;
@@ -43,16 +48,16 @@
 <body>
     <form class="formGenerated">
         <label for="">Ad</label>
-        <input type="text" name="firstname" placeholder="Adınızı Giriniz">
+        <input type="text" name="firstname" class="formElement" placeholder="Adınızı Giriniz">
         <label for="">Soyad</label>
-        <input type="text" name="lasttname" placeholder="Soyadınızı Giriniz">
+        <input type="text" name="lasttname" class="formElement" placeholder="Soyadınızı Giriniz">
         <label for="">Ülkeler</label>
-        <select name="country" id="">
+        <select class="formElement" name="country" id="">
             <option value="tr">Türkiye</option>
             <option value="fr">Fransa</option>
             <option value="en">İngiltere</option>
         </select>
-        <input type="submit" value="Kaydet">
+        <input class="formSubmit" type="submit" value="Kaydet">
 
 
     </form>

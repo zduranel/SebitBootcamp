@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        .imgMainDiv{
+            display:flex;
+            justify-content: center;
+            margin: 30px 0px;
+        }
+        .imgDiv{
+            border: 1px solid black;
+            width:200px; 
+            border-radius: 25px;
+            margin-right: 30px;
+        }
+
+        .imgDiv img{
+            width: 100%; border-radius: 25px 25px 0px 0px;
+        }
+
+        .imgDiv h3{
+            text-align:center;
+        }
+        .imgDiv p{
+            padding: 0px 20px;
+        }
+
+        .formElement{
+            width: 100%;
+            padding:10px;
+            border-radius: 10px;
+            margin:8px 0px;
+            box-sizing: border-box;
+
+        }
+        /* içine girdiğinde */
+        .formElement:focus{
+            background-color:greenyellow;
+        }
+
+        
+
+        /* üzerine gelindiğinde */
+        .formElement:hover{
+            background-color:red;
+        }
+
+        .formSubmit:hover{
+            background-color:greenyellow;
+        }
+
+        .formSubmit{
+            width: 100%;
+            padding:13px;
+            background-color:lightslategray;
+            border:none;
+            border-radius: 15px;
+            color:wheat;
+
+        }
+        .formGenerated{
+            background-color:aquamarine;padding:20px;margin:10px 300px;
+
+        }
+        .header{
+            display:flex;
+            justify-content: space-between;
+            height: 60px;
+            background-color:pink;
+            align-items: center;
+            padding: 0px 15px;
+            margin-bottom: 5px;
+            border-radius: 7px;
+        }
+
+        .headerLink{
+            text-decoration: none;
+            color:black;
+            font-size:18px;
+            margin-right: 10px;
+        }
+        .footerLink{
+            text-decoration: none;
+            color:black;
+            font-size:18px;
+            margin-right: 10px;
+        }
+        .footer{
+            display:flex;
+            justify-content:center;
+            height: 100px;
+            background-color:black;
+            align-items: center;
+            padding: 0px 15px;
+            margin-bottom: 5px;
+            border-radius: 7px;
+            font-size: 18px;
+            color: white;
+            margin-top: 20px;
+        }
+
+        /* MOBİLDE GEÇERLİ OLACAK CSS İÇİN */
+        @media only screen and (max-width: 600px){
+            .imgMainDiv{
+                flex-direction: column;
+                
+            }
+            .imgDiv{
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            .formGenerated{
+                margin:0px;
+            }
+                        
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <header class="header">
+        <div>
+            <img src="1.jpg" alt="" width="40px" style="border-radius:5px;">
+        </div>
+        <div>
+            <a class="headerLink" href="#">Home</a>
+            <a class="headerLink" href="#">About</a>
+            <a class="headerLink" href="#">Contact</a>
+        </div>
+        
+        
+    </header>
+
+
+      <!-- İÇERİDEKİ YAZIYI HİZALAMA YÖNTEMİ position relative absolute-->
+    <div style="background-image: url('banner.jpg');height: 400px;position: relative;border-radius: 9px;"> 
+        <div style="position: absolute; top: 30px;left: 0px;right: 0px;text-align: center;">
+            <h3>BANNER</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias delectus doloremque dolor nulla. Optio deserunt animi ea harum officiis inventore impedit illo tempore, numquam quod soluta unde rem ab voluptatum!</p>
+        </div>
+    </div>
+
+
+    <div class="imgMainDiv">
+        <div class="imgDiv">
+            <img src="1.jpg" alt="1" >
+            <h3>EFSO BAŞLIK</h3>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, possimus. Tempora, nemo harum commodi, cupiditate distinctio iure blanditiis, sint rerum quia inventore suscipit ipsa veniam in quidem quod error perferendis?</P>
+            
+        </div>
+
+        <div class="imgDiv">
+            <img src="2.jpg" alt="2" >
+            <h3>EFSO BAŞLIK</h3>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, possimus. Tempora, nemo harum commodi, cupiditate distinctio iure blanditiis, sint rerum quia inventore suscipit ipsa veniam in quidem quod error perferendis?</P>
+            
+        </div>
+
+        <div class="imgDiv">
+            <img src="3.jpg" alt="3" >
+            <h3>EFSO BAŞLIK</h3>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, possimus. Tempora, nemo harum commodi, cupiditate distinctio iure blanditiis, sint rerum quia inventore suscipit ipsa veniam in quidem quod error perferendis?</P>
+            
+        </div>
+
+        <div class="imgDiv">
+            <img src="4.jpg" alt="4" >
+            <h3>EFSO BAŞLIK</h3>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quasi, possimus. Tempora, nemo harum commodi, cupiditate distinctio iure blanditiis, sint rerum quia inventore suscipit ipsa veniam in quidem quod error perferendis?</P>
+            
+        </div>
+    </div>
+
+    <form class="formGenerated">
+        <label for="">Ad</label>
+        <input type="text" name="firstname" class="formElement" placeholder="Adınızı Giriniz">
+        <label for="">Soyad</label>
+        <input type="text" name="lasttname" class="formElement" placeholder="Soyadınızı Giriniz">
+        <label for="">Ülkeler</label>
+        <select class="formElement" name="country" id="">
+            <option value="tr">Türkiye</option>
+            <option value="fr">Fransa</option>
+            <option value="en">İngiltere</option>
+        </select>
+        <input class="formSubmit" type="submit" value="Kaydet">
+
+
+    </form>
+
+    <footer class="footer">
+        <p>2022 - Designed by Zekeriya Duranel</p>
+    </footer>
+
+    
+</body>
+</html>
