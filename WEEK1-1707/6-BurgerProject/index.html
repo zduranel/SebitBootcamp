@@ -11,6 +11,7 @@
             display:flex;
             justify-content: center;
             margin: 30px 0px;
+            
         }
         .imgDiv{
             border: 1px dashed black;
@@ -111,21 +112,11 @@
 
         /* MOBİLDE GEÇERLİ OLACAK CSS İÇİN */
 
-        @media only screen and (max-width: 900px){
-            .imgMainDiv{
-                
-                flex-direction: row;
-                
-                
-            }
-            .imgDiv{
-                width: 50%;
-            }
-
-        }
+       
         @media only screen and (max-width: 600px){
             .imgMainDiv{
                 flex-direction: column;
+                align-items: center;
                 
             }
             .imgDiv{
@@ -187,8 +178,7 @@
                 <p style="color:red;font-size: 25px;">45.99 <i>TL</i></p>
                 <button class="button">Satın Al</button>
             </div>  
-        </div>
-
+        </div> 
         <div class="imgDiv">
             <img src="burger.jpg" alt="1" >
             <h3>KASAP BURGER</h3>
@@ -207,11 +197,14 @@
                 <p style="color:red;font-size: 25px;">45.99 <i>TL</i></p>
                 <button class="button">Satın Al</button>
             </div>  
-        </div>
+        </div> 
 
-        
-        
     </div>
+
+    
+            
+    
+
     <div class="imgMainDiv">
         <div class="imgDiv">
             <img src="burger.jpg" alt="1" >
