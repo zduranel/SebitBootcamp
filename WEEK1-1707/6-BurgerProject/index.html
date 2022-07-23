@@ -7,6 +7,19 @@
     <title>Document</title>
     <style>
 
+        .banner{
+            background-image: url('banner.jpg');
+            height: 400px;position: relative;
+            border-radius: 9px;
+        }
+
+        .bannerDiv{
+            position: absolute; 
+            top: 30px;
+            left: 0px;
+            right: 0px;
+            text-align: center;
+        }
         .imgMainDiv{
             display:flex;
             justify-content: center;
@@ -108,6 +121,15 @@
             width: 100px;
             margin-bottom: 30px;
         }
+
+        .pricePurchaseDiv{
+            display:flex;flex-direction: column;align-items: center;
+        }
+
+        .price{
+            color:red;
+            font-size: 25px;
+        }
         
 
         /* MOBİLDE GEÇERLİ OLACAK CSS İÇİN */
@@ -150,8 +172,8 @@
 
 
       <!-- İÇERİDEKİ YAZIYI HİZALAMA YÖNTEMİ position relative absolute-->
-    <div style="background-image: url('banner.jpg');height: 400px;position: relative;border-radius: 9px;"> 
-        <div style="position: absolute; top: 30px;left: 0px;right: 0px;text-align: center;">
+    <div class="banner"> 
+        <div class="bannerDiv">
             <h3>EFSANE KASAP BURGER</h3>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem facilis sint consequatur optio voluptatibus earum enim, at, maiores possimus assumenda porro omnis impedit. Amet cumque sapiente, optio impedit consequatur saepe!</p>
             
@@ -164,8 +186,8 @@
             <img src="burger.jpg" alt="1" >
             <h3>KASAP BURGER</h3>
             <p>Bol Malzemeli Efsane Burger</p>
-            <div style="display:flex;flex-direction: column;align-items: center;">
-                <p style="color:red;font-size: 25px;">45.99 <i>TL</i></p>
+            <div class="pricePurchaseDiv">
+                <p class="price">45.99 <i>TL</i></p>
                 <button class="button">Satın Al</button>
             </div>  
         </div>
