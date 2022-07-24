@@ -146,6 +146,31 @@
             list-style-type:none;
         }
         
+        .mobilIcon{
+            display:none;
+        }
+
+        @media only screen and (max-width: 600px){
+            .mobilIcon{
+                display: block;
+            }
+            .headerimg{
+                display: none;
+            }
+            .header{
+                flex-direction: column;
+                align-items: flex-start;
+                height: auto;
+            }
+            .mobileLink{
+                display:flex;
+                flex-direction:column;
+            }
+
+            .mobileLinkDiv{
+                display:none;
+            }
+        }
 
         
     </style>
@@ -155,13 +180,18 @@
 <body>
 
     <header class="header">
-        <div>
+        <div class="mobilIcon" onclick="toggle()">
+            <img src="icon.jpg" alt="" height="40px" style="border-radius:5px;">
+        </div>
+        <div class="headerimg">
             <img src="burgerlogo.png" alt="" height="40px" style="border-radius:5px;">
         </div>
-        <div>
-            <a class="headerLink" href="#">Home</a>
-            <a class="headerLink" href="#">About</a>
-            <a class="headerLink" href="#">Contact</a>
+        <div id="navDiv" class="mobileLinkDiv">
+            <div class="mobileLink">
+                <a class="headerLink" href="#">Home</a>
+                <a class="headerLink" href="#">About</a>
+                <a class="headerLink" href="#">Contact</a>
+            </div>
         </div>
         
         
@@ -287,15 +317,6 @@
     </div>
 
 
-   
-
-    
-            
-    
-
-
-
-
     <footer class="footer">
         <div>
             <ul class="footerList">
@@ -330,6 +351,21 @@
 
         </div>
     </footer>
+    <script>
+        function toggle(){
+            let x = document.getElementById("navDiv");
+            
+            
+            if(x.style.display == "none")
+            {
+                x.style.display = "block";
+            }else{
+                x.style.display = "none";
+            }
+        }
+
+    </script>
+    
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
 
