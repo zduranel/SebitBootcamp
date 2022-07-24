@@ -1,0 +1,162 @@
+* {
+    box-sizing: border-box;
+}
+
+.banner{
+    background-image: url('img/banner3.jpg');
+    height: 400px;
+    position: relative;
+    border-radius: 9px;
+}
+
+.bannerDiv{
+    position: absolute; 
+    bottom: 30px;
+    left: 15px;
+    right: 15px;
+    text-align: center;
+    background-color:aquamarine;
+    border-radius: 19px;
+}
+
+
+.imgMainDiv{
+    display:flex;
+    justify-content: center;
+    margin: 30px 0px;
+    
+}
+
+/* TABLET GÖRÜNÜMÜNDE 2Lİ SIRALAMAK İÇİN FLEXİ %50 YAPTIK */
+.imgResDiv{
+    flex:25%;
+
+}
+.imgDiv{
+    border: 1px dashed black;
+    border-radius: 25px;
+    margin: 20px 0px;   
+}
+
+.imgDiv img{
+    width: 100%; 
+    border-radius: 25px 25px 0px 0px;
+}
+
+.imgDiv h3{
+    text-align:center;
+    color:red;
+
+}
+.imgDiv p{
+    text-align:center;
+
+}
+.imgDiv p{
+    padding: 0px 20px;
+    text-align: center;
+}
+
+
+
+.submit{
+    
+    padding:15px;
+    border:none;
+    border-radius: 15px; 
+    background-color:green;
+    border-radius: 15px;
+    color:white;
+    margin-bottom: 30px;
+    margin-left: 60px;
+    text-align:center;
+
+}
+
+.header{
+    display:flex;
+    justify-content: space-between;
+    height: 60px;
+    background-color:rgb(72, 195, 226);
+    align-items: center;
+    padding: 0px 15px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+}
+
+.headerLink{
+    text-decoration: none;
+    color:black;
+    font-size:18px;
+    margin-right: 10px;
+}
+
+.footerLink{
+    text-decoration: none;
+    color:black;
+    font-size:20px;
+}
+.footer{
+    display:flex;
+    justify-content: space-around;
+    height: 150px;
+    background-color:aquamarine;
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    font-size: 18px;
+    color: white;
+    margin-top: 20px;
+    
+}
+
+.footer li{
+    margin-top: 10px;
+}
+
+
+.button{
+    padding:10px 15px;
+    border: none;
+    border-radius: 25px;
+    background-color: green;
+    color:white;
+    width: 100px;
+    margin-bottom: 30px;
+}
+
+.footerimg{
+    width: 170px;
+    border-radius:50px;
+}
+
+.footerList{
+    list-style-type:none;
+}
+
+.mobilIcon{
+    display:none;
+}
+
+@media only screen and (max-width: 600px){
+    .mobilIcon{
+        display: block;
+    }
+    .headerimg{
+        display: none;
+    }
+    .header{
+        flex-direction: column;
+        align-items: flex-start;
+        height: auto;
+    }
+    .mobileLink{
+        display:flex;
+        flex-direction:column;
+    }
+
+    .mobileLinkDiv{
+        display:none;
+    }
+}
+
