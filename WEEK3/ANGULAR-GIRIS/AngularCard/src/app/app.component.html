@@ -1,0 +1,44 @@
+<!-- <div>
+  <p>İLK ANGULAR PROJEM</p>
+  {{zek}}
+</div> -->
+
+<!-- <div *ngIf="isUptade"> //true ise bu div görünür değilse görünmez
+  TRUE İSE
+</div>
+
+<div *ngIf="!isUptade"> //true ise bu div görünür değilse görünmez
+  FALSE İSE
+</div> -->
+<!--
+<div *ngFor="let post of posts">
+  {{post.title}}
+</div> -->
+
+<div class="container">
+  <div class="row my-5">
+    <div *ngFor="let post of posts" class="col-md-4">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>{{post.title}}</mat-card-title>
+          <mat-card-subtitle>{{post.username}}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="{{post.imageUrl}}" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>
+            {{post.content}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  </div>
+
+</div>
+
+
