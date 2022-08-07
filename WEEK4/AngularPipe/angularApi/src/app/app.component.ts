@@ -10,6 +10,7 @@ export class AppComponent {
   date:string = "";
   money:string = "";
   height:number = 0;
+  cm:number = 0;
 
   onNameChange(value:string){
     this.name = value;
@@ -27,5 +28,9 @@ export class AppComponent {
 
   onHeightChange(value:string){
     this.height = parseFloat(value);
+  }
+
+  onCmChange(value:string){
+    this.cm = parseFloat(value);
   }
 }

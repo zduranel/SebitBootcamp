@@ -69,9 +69,27 @@
     </div>
 
     <div class="col-md-6">
-      <label><b>Money</b></label>
+      <label><b>Değer</b></label>
       <div>
         {{height | number:'1.1-4'}}
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Kilometre</label>
+        <input class="form-control" type="text" (input)="onCmChange($event.target.value)">
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+      <label><b>Santimetre</b></label>
+      <div>
+        {{cm | convertcm }}
       </div>
     </div>
 

@@ -34,6 +34,7 @@ export class HomeComponent implements OnInit {
   }
 
   openDialog(element:any,viewOrUptade:boolean){
+
     const dialogRef = this.dialog.open(BlogDialogComponent,{
       width:'450px',
       data:{blog : element,isUpdate:viewOrUptade}

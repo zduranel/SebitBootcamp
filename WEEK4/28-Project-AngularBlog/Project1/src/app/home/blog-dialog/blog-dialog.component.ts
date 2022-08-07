@@ -28,7 +28,9 @@ export class BlogDialogComponent implements OnInit {
     //düzenleme sayfasına git
     if(data.isUpdate)
     {
+
       this.isUpdateBlog=true;
+
       this.form.patchValue({
         title:data.blog.title,
         body:data.blog.body,
@@ -48,6 +50,7 @@ export class BlogDialogComponent implements OnInit {
     }
 
     onSubmit(){
+
       const request = {
         title:this.form.get('title')?.value,
         body:this.form.get('body')?.value,
