@@ -1,0 +1,30 @@
+<div class="centered">
+
+    <nav>
+      <ul class="pagination">
+        <li class="page-item" [ngClass]="currentPage === 0 ? 'disabled' : ''">
+          <a class="page-link" (click)="currentPage = currentPage-1" >Önceki</a>
+        </li>
+
+        <li class="page-item" [ngClass]="i === currentPage ? 'active':''" *ngFor="let image of images;let i=index">
+          <!-- <a class="page-link" (click)="onPageChange(i)" href="#">{{i+1}}</a>  İLK YÖNTEM FONKSİYONÇAGIRMA alttaki kısa yöntemi-->
+          <a class="page-link" (click)="currentPage = i" href="#">{{i+1}}</a>
+        </li>
+
+        <li class="page-item" [ngClass]="currentPage === images.length-1 ? 'disabled' : ''">
+          <a class="page-link" (click)="currentPage = currentPage+1" href="#">Sonraki</a>
+        </li>
+      </ul>
+    </nav>
+</div>
+
+
+<div class="centered2">
+    <div>
+      <h3>{{images[currentPage].title}}</h3>
+    </div>
+    <div>
+      <img [src]="images[currentPage].url" >
+      <!-- <img src="{{images[currentPage].url}}" > -->
+    </div>
+</div>
