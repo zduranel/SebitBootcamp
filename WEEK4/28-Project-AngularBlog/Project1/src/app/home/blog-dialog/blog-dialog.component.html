@@ -19,7 +19,7 @@
  </div>
 
 
- <form [formGroup]="form" *ngIf="isUpdateBlog">
+ <form [formGroup]="form" *ngIf="isUpdateBlog" style="min-width:500px;">
   <div class="container">
     <div class="row">
       <mat-form-field>
@@ -49,11 +49,28 @@
 <!-- GÖRÜNTÜLE -->
 <form [formGroup]="form" *ngIf="!isUpdateBlog">
   <div class="container" >
-    <div class="row">
-      <!-- <p formControlName="title">  </p> -->
-      <input matInput formControlName="title">
+    <div class="row mb-2">
+      <div class="col-lg-6">
+        <img class="w-100" src="assets/images/image{{imageUrl}}.jpg" alt="">
+      </div>
+
+      <div class="col-lg-6">
+       <h2>{{title}}</h2>
+       <p>{{content}}</p>
+      </div>
+    </div>
+
+    <div style="background-color:lightgrey;padding:20px;margin-bottom:20px;" class="row" *ngFor="let comment of commentData">
+      <div class="col-lg-2">
+        <img style="width:50px;border-radius:50%;" src="assets/images/profile/profile{{comment.userId}}.jpg">
+      </div>
+      <div class="col-lg-10">
+        <h3><b>{{comment.name}}</b></h3>
+        <p>{{comment.body}}</p>
+      </div>
 
     </div>
+
   </div>
 
 </form>
