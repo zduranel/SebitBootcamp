@@ -1,0 +1,31 @@
+{
+  "articles": [
+    {
+      "author": "gfd",
+      "title": "gdfgdfsggfdsgfdgfds",
+      "content": "gfdsgfd",
+      "comments": [],
+      "id": 1
+    },
+    {
+      "author": "zekeriya duranel",
+      "title": "test",
+      "content": "test datasıı",
+      "comments": [
+        {
+          "username": "341",
+          "comment": "2314332"
+        },
+        {
+          "username": "45235",
+          "comment": "5234523"
+        },
+        {
+          "username": "zekeriya",
+          "comment": "başarılı"
+        }
+      ],
+      "id": 2
+    }
+  ]
+}

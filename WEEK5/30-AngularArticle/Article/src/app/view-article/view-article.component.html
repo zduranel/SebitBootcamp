@@ -1,0 +1,39 @@
+<div style="display:flex;justify-content:center;margin-top:50px;" *ngIf="articlesData">
+  <mat-card style="width:50%;">
+    <mat-card-content>
+
+      <h1>{{articlesData[articleId].title}}</h1>
+      <p>{{articlesData[articleId].content}}</p>
+      <div style="font-size:18px">
+        <span style="font-weight:700">Yazar:</span> {{articlesData[articleId].author}}
+      </div>
+
+      <h3>YORUMLAR : </h3>
+      <div  style="margin:30px 0px;" *ngFor="let a of articlesData[articleId].comments">
+
+        <SPAN style="margin-right: 30px;">{{a.username}} :</SPAN>
+        <SPAN>{{a.comment}}</SPAN>
+
+
+      </div>
+
+      <!-- ad:{{articlesData[articleId].comments}} -->
+
+    <div style="display:flex ; flex-direction: column;margin-top:50px;">
+      <mat-form-field>
+        <mat-label>Kullanıcı Adı</mat-label>
+        <input [(ngModel)]="username" matInput />
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Yorum</mat-label>
+        <input [(ngModel)]="comment" matInput />
+      </mat-form-field>
+    </div>
+
+    </mat-card-content>
+    <mat-card-actions>
+      <button (click)="addComment()" style="width: 100%;"  mat-raised-button color="primary">Yorum Yap</button>
+    </mat-card-actions>
+  </mat-card>
+
+</div>
